@@ -42,14 +42,12 @@ class Api {
   patchUserInfo(info) {
     return fetch(`${this._baseUrl}/users/me`, {
       headers: this._headers,
-      body: JSON.stringify({
-        name: info.nameUser,
-        about: info.jobUser,
-      }),
+      body: JSON.stringify(info),
       method: 'PATCH',
     })
     .then(this._getResponseData)
   }
+
 
   // обновление аватара
   patchUserAvatar(link) {
