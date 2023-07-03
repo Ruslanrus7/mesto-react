@@ -66,7 +66,7 @@ function App() {
     })
     .catch(err => {
       console.log(`Ошибка: ${err}`);
-      });
+      })
   }
 
   function handleCardDeliteLike (card) {
@@ -77,7 +77,7 @@ function App() {
     })
     .catch(err => {
       console.log(`Ошибка: ${err}`);
-      });
+      })
   }
 
   function handleCardDelete (card) {
@@ -88,7 +88,7 @@ function App() {
     })
     .catch(err => {
       console.log(`Ошибка: ${err}`);
-      });
+      })
   }
 
   function handleUpdateUser (data) {
@@ -99,7 +99,7 @@ function App() {
     })
     .catch(err => {
       console.log(`Ошибка: ${err}`);
-      });
+      })
   }
 
   function handleUpdateAvatar (link) {
@@ -110,7 +110,7 @@ function App() {
     })
     .catch(err => {
       console.log(`Ошибка: ${err}`);
-      });
+      })
   }
 
   function handleAddPlaceSubmit (Card) {
@@ -121,7 +121,7 @@ function App() {
     })
     .catch(err => {
       console.log(`Ошибка: ${err}`);
-      });
+      })
   }
 
   return (
