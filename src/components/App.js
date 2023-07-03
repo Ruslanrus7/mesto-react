@@ -63,7 +63,10 @@ function App() {
     api.likeCard(card._id)
     .then((newCard) => {
       setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
-    });
+    })
+    .catch(err => {
+      console.log(`Ошибка: ${err}`);
+      });
   }
 
   function handleCardDeliteLike (card) {
@@ -71,7 +74,10 @@ function App() {
     api.deleteLike(card._id)
     .then((newCard) => {
       setCards((state) => state.map((c) => c._id === card._id ? newCard : c));
-    });
+    })
+    .catch(err => {
+      console.log(`Ошибка: ${err}`);
+      });
   }
 
   function handleCardDelete (card) {
@@ -80,6 +86,9 @@ function App() {
     .then(()=> {
       setCards(cards => cards.filter((c) => c._id !== card._id));
     })
+    .catch(err => {
+      console.log(`Ошибка: ${err}`);
+      });
   }
 
   function handleUpdateUser (data) {
@@ -88,6 +97,9 @@ function App() {
       setCurrentUser(res);
       closeAllPopups();
     })
+    .catch(err => {
+      console.log(`Ошибка: ${err}`);
+      });
   }
 
   function handleUpdateAvatar (link) {
@@ -96,6 +108,9 @@ function App() {
       setCurrentUser(res);
       closeAllPopups();
     })
+    .catch(err => {
+      console.log(`Ошибка: ${err}`);
+      });
   }
 
   function handleAddPlaceSubmit (Card) {
@@ -104,6 +119,9 @@ function App() {
       setCards([newCard, ...cards]);
       closeAllPopups();
     })
+    .catch(err => {
+      console.log(`Ошибка: ${err}`);
+      });
   }
 
   return (
